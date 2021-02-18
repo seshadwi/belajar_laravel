@@ -25,7 +25,21 @@ Route::get('/', function () {
 
 //--Praktikum 2--\\
 use App\Http\Controllers\SeshaController;
-Route::get('/',[SeshaController::class, 'index']);
-Route::get('/about',[SeshaController::class, 'about']);
-Route::get('/article',[SeshaController::class, 'article']);
+//Route::get('/',[SeshaController::class, 'index']);
+//Route::get('/about',[SeshaController::class, 'about']);
+//Route::get('/article',[SeshaController::class, 'article']);
 
+//--Praktikum 3--\\
+use App\Http\Controllers\BlogController;
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/blog', function () {
+    return view('home');
+});
+Route::get('/blog/tentang', function () {
+    return view('tentang');
+});
+Route::get('/blog/kontak', function () {
+    return view('kontak');
+});
